@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/x15">
+
+
+        <com.ingic.lmslawyer.ui.views.AnyTextView
+            android:id="@+id/txtFeed"
+            style="@style/textview_large_dark_gray_style"
+            android:text="US government eases immigration laws"
+            app:typeface="@string/font_roboto" />
+
+        <LinearLayout
+            android:id="@+id/dateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:orientation="horizontal">
+
+
+            <com.ingic.lmslawyer.ui.views.AnyTextView
+                android:id="@+id/txtTime"
+                style="@style/textview_gray_style"
+                android:drawableLeft="@drawable/icn_time"
+                android:drawablePadding="@dimen/x5"
+                android:text="13:20"
+                app:typeface="@string/font_roboto" />
+
+            <com.ingic.lmslawyer.ui.views.AnyTextView
+                android:id="@+id/txtDate"
+                style="@style/textview_gray_style"
+                android:layout_marginLeft="@dimen/x25"
+                android:drawableLeft="@drawable/icn_date"
+                android:drawablePadding="@dimen/x5"
+                android:text="29-09-17"
+                app:typeface="@string/font_roboto" />
+
+            <com.ingic.lmslawyer.ui.views.AnyTextView
+                android:id="@+id/txtLocation"
+                style="@style/textview_gray_style"
+                android:layout_marginLeft="@dimen/x25"
+                android:drawableLeft="@drawable/icn_world"
+                android:drawablePadding="@dimen/x5"
+                android:text="SanFrancisco"
+                app:typeface="@string/font_roboto" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imgFeed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x150"
+            android:layout_marginTop="@dimen/x10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/justice1" />
+
+        <com.ingic.lmslawyer.ui.views.AnyTextView
+            android:id="@+id/txtDetail"
+            style="@style/textview_gray_style"
+            android:layout_margin="@dimen/x10"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/lorem_ipsum"
+            app:typeface="@string/font_roboto" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@id/dateLayout"
+        android:background="@color/light_grey"
+
+        >
+
+    </View>
+
+</LinearLayout>

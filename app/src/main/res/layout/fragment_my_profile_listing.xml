@@ -1,0 +1,158 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg5"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context="com.ingic.lmslawyer.fragments.home.MainHomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:background="@drawable/my_profile_header_image"
+        android:paddingTop="@dimen/_4sdp">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@drawable/icn_back" />
+
+
+        <TextView
+            android:id="@+id/tvtitlebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@string/font_roboto"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/tvListTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvtitlebar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:fontFamily="@string/font_roboto_bold"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            tools:text="Select Specialization" />
+
+
+        <LinearLayout
+            android:id="@+id/llSearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvListTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:background="@drawable/home_searchbaar"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.ingic.lmslawyer.ui.views.AnyEditTextView
+                android:id="@+id/edt_search"
+                style="@style/editText_medium_gray_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.85"
+                android:hint="@string/search"
+                android:paddingLeft="@dimen/_12sdp"
+                android:paddingRight="@dimen/_12sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_12sdp"
+                android:theme="@style/FloatingLabel"
+                app:typeface="@string/font_roboto" />
+
+            <ImageView
+                android:id="@+id/imgviewSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.15"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/ic_home_search" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_180sdp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_300sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:background="@drawable/my_profile_list_box"
+                android:orientation="vertical"
+                android:padding="@dimen/_24sdp">
+
+                <com.ingic.lmslawyer.ui.views.AnyTextView
+                    android:id="@+id/txt_no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="No Data to show"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/x15"
+                    android:visibility="gone"
+                    app:typeface="Roboto-Regular.ttf"
+
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvProfileList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/llSearchBar"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:background="@color/transparent"
+                    android:divider="@color/transparent"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnNext"
+                style="@style/maroon_button_style_less_width"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="8dp"
+                android:text="@string/next" />
+
+        </FrameLayout>
+    </ScrollView>
+
+</FrameLayout>

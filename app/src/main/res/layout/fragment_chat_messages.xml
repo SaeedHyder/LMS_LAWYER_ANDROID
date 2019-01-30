@@ -1,0 +1,146 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ingic.lmslawyer.fragments.Case.ChatMessagesFragment">
+
+    <ScrollView
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_24sdp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/llheadings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/seperator"
+                    android:layout_alignTop="@+id/rlheadingsText"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/textview_grey_my_case_style"
+                        android:fontFamily="@font/bold"
+                        android:text="Lawyer Name:" />
+
+
+                    <TextView
+                        style="@style/textview_grey_my_case_style"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/bold"
+                        android:gravity="right"
+                        android:text="Case Members:" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlheadingsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/llheadings"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvLawyerName"
+                        style="@style/textview_grey_my_case_style"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toStartOf="@id/tvDateTime"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Philpe Gibson" />
+
+                    <TextView
+                        android:id="@+id/tvEdit"
+                        style="@style/textview_maroon_style"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:drawableEnd="@drawable/ic_edit"
+                        android:drawablePadding="@dimen/_6sdp"
+                        android:drawableTint="@color/app_maroon"
+                        android:text="@string/edit" />
+
+                    <TextView
+                        android:id="@+id/tvCaseMembers"
+                        style="@style/textview_grey_my_case_style"
+                        android:layout_below="@id/tvLawyerName"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:ellipsize="end"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="John Galin, Cavin Brend, Albert Chris" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/seperator"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@id/rlheadingsText"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:background="@color/grey" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/textview_grey_medium_regular_style"
+                android:layout_centerInParent="true"
+                android:text="Will be implemented in beta" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:weightSum="1">
+
+        <com.ingic.lmslawyer.ui.views.AnyEditTextView
+            style="@style/inputDarkGrayEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.74"
+            android:background="@color/transparent"
+            android:hint="@string/write_your_message_here"
+            app:typeface="@string/font_roboto" />
+
+        <ImageView
+            android:id="@+id/imgAttachment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.15"
+            android:padding="6dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_attachment" />
+
+        <ImageView
+            android:id="@+id/imgSend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.15"
+            android:padding="6dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_sendbtn" />
+
+    </LinearLayout>
+</RelativeLayout>

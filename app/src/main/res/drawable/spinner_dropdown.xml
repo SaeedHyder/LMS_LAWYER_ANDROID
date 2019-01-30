@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <layer-list>
+
+            <item android:drawable="@drawable/rounded_box" />
+
+            <item
+                android:right="5dp"
+                android:left="15dp">
+
+                <bitmap android:gravity="center_vertical|right" android:src="@drawable/ic_downarow" />
+                // you can place your dropdown image
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

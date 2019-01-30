@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+  <!--  <item android:drawable="@drawable/headerimage"
+        android:state_selected="false" />
+    <item android:drawable="@drawable/background_tabs"
+        android:state_selected="true" />
+    <item android:drawable="@drawable/headerimage" />
+-->
+    <item  android:state_selected="true" >
+        <bitmap
+            android:gravity="bottom|center_horizontal"
+            android:src="@drawable/draw_line" />
+    </item>
+  <!--  <item android:state_selected="true"
+        android:gravity="bottom|center_horizontal"
+        android:drawable="@drawable/maroon_line" />-->
+</selector>

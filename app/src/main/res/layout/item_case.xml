@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:paddingBottom="@dimen/_12sdp"
+    android:paddingTop="@dimen/_12sdp"
+    android:paddingLeft="@dimen/_12sdp"
+    android:paddingRight="@dimen/_12sdp"
+    android:id="@+id/llCaseItem"
+    tools:background="@color/grey_transparent">
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/mainlayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:padding="@dimen/x15">-->
+
+    <!--
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/x60"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/women" />-->
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="@dimen/_74sdp"
+        android:layout_height="@dimen/_74sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cases_logobox" />
+
+    <RelativeLayout
+        android:id="@+id/textLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/profileImage"
+        android:layout_alignTop="@+id/profileImage"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_toEndOf="@id/profileImage"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCaseName"
+            style="@style/textview_smallest_gray_style"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@id/tvDate"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="White Case.."
+            android:textSize="@dimen/_18sdp" />
+
+        <TextView
+            android:id="@+id/tvLawyerName"
+            style="@style/textview_smallest_gray_style"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvCaseName"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_toStartOf="@+id/tvEvents"
+            android:singleLine="true"
+            tools:text="@string/lawyer_philipe_gibson"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/txtCaseDetails"
+            style="@style/textview_smallest_gray_style"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvLawyerName"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:layout_toStartOf="@+id/tvViewDetails"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="Case to cacxcxc xcxccx cxcxc xcxcxxxcxcxse"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            style="@style/textview_smallest_gray_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="12:30 pm | 12 Sep2017"
+            android:textColor="@color/inputEditTextColor"
+            android:textSize="@dimen/_8sdp" />
+
+        <TextView
+            android:id="@+id/tvEvents"
+            style="@style/textview_maroon_small_regular_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvDate"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_calender"
+            android:text="3 Events"
+            tools:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tvTotalPayment"
+            style="@style/textview_maroon_small_regular_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvLawyerName"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvDate"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Total Payment: $300"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvViewDetails"
+            style="@style/textview_smallest_gray_style"
+            android:layout_alignEnd="@id/tvEvents"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvEvents"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/stroke_grey_rounded"
+            android:paddingBottom="@dimen/_6sdp"
+            android:paddingLeft="@dimen/_13sdp"
+            android:paddingRight="@dimen/_13sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:text="@string/view_detail"
+            android:textSize="@dimen/_8sdp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+    <!--</RelativeLayout>-->
+
+
+</LinearLayout>

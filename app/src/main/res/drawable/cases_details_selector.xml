@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+  <!--  <item android:drawable="@drawable/headerimage"
+        android:state_selected="false" />
+    <item android:drawable="@drawable/background_tabs"
+        android:state_selected="true" />
+    <item android:drawable="@drawable/headerimage" />
+-->
+    <item  android:state_selected="true"
+        android:drawable="@drawable/maroon_sq_box">
+        <bitmap
+            android:gravity="top|center_horizontal"
+            android:src="@drawable/description_selected"
+            />
+    </item>
+    <item  android:state_selected="false"
+        >
+        <bitmap
+            android:gravity="center_horizontal"
+            android:src="@drawable/description2" />
+    </item>
+  <!--  <item android:state_selected="true"
+        android:gravity="bottom|center_horizontal"
+        android:drawable="@drawable/maroon_line" />-->
+</selector>

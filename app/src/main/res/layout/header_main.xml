@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/x50"
+    android:background="@color/transparent"
+    tools:background="@color/black">
+
+
+    <ImageView
+        android:id="@+id/btnLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x10"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icn_back"
+        android:visibility="visible" />
+
+
+    <com.ingic.lmslawyer.ui.views.AnyTextView
+        android:id="@+id/txt_subHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:typeface="@string/font_roboto"
+        tools:text="Template" />
+
+    <ImageView
+        android:id="@+id/btnRight2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/btnRight"
+        android:layout_alignTop="@+id/btnRight"
+        android:layout_alignBottom="@+id/btnRight"
+        android:layout_centerVertical="true"
+        android:src="@drawable/bookmark1"
+        android:visibility="gone"
+        android:padding="@dimen/x8"/>
+
+    <ImageView
+        android:id="@+id/btnRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x10"
+        android:padding="10dp"
+        android:src="@drawable/icn_filter"
+        android:visibility="gone" />
+
+</RelativeLayout>

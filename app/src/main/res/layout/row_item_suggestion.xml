@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/x15"
+        android:background="@drawable/yellow_rounded_rectangle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/x6"
+        android:paddingEnd="@dimen/x12"
+        android:paddingStart="@dimen/x12"
+        android:paddingTop="@dimen/x6">
+
+        <com.ingic.lmslawyer.ui.views.AnyTextView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arab World"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x13"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <ImageView
+            android:id="@+id/cross"
+            android:layout_width="@dimen/x8"
+            android:layout_height="@dimen/x8"
+            android:layout_marginStart="@dimen/x8"
+            android:src="@drawable/cross_white" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

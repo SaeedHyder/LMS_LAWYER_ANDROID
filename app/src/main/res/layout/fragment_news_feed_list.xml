@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_14sdp"
+    android:paddingRight="@dimen/_14sdp">
+
+    <LinearLayout
+        android:id="@+id/llSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/home_searchbaar"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <!--  <com.ingic.lmsuser.ui.views.AnyEditTextView
+              android:id="@+id/etSearch"
+              style="@style/editText_medium_gray_style"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="0.0"
+              android:hint="@string/search"
+              android:paddingLeft="@dimen/_12sdp"
+              android:paddingRight="@dimen/_12sdp"
+              android:singleLine="true"
+              android:textSize="@dimen/_12sdp"
+              android:theme="@style/FloatingLabel"
+              app:typeface="@string/font_roboto" />-->
+
+        <!--  <com.ingic.lmsuser.AutoCompleteView.CustomAutoCompleteView
+              android:id="@+id/etSearch"
+              style="@style/editText_medium_gray_style"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="0.85"
+              android:completionThreshold="1"
+              android:hint="@string/search"
+              android:paddingLeft="@dimen/_12sdp"
+              android:paddingRight="@dimen/_12sdp"
+              android:singleLine="true"
+              android:textSize="@dimen/_12sdp"
+              android:visibility="gone"></com.ingic.lmsuser.AutoCompleteView.CustomAutoCompleteView>
+  -->
+        <com.ingic.lmslawyer.ui.views.AnyEditTextView
+            android:id="@+id/edtSearch"
+            style="@style/inputDarkGrayEditTextWithoutPadding"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="0.85"
+            android:hint="@string/search_feeds"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/x15"
+            app:typeface="@string/font_roboto"
+
+            />
+
+        <ImageView
+            android:id="@+id/imgviewSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.15"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_home_search" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvNewsfeedCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llSearchBar"
+        android:visibility="gone"
+        />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvNewsfeed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rvNewsfeedCategory"/>
+
+
+    <TextView
+        android:id="@+id/alternateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/regular"
+        android:text="@string/no_records_found"
+        android:textSize="14sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</RelativeLayout>

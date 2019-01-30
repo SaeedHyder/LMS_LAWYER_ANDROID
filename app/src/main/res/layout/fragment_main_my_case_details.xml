@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.ingic.lmslawyer.fragments.Case.MainMyCaseDetailsFragment">
+
+    <FrameLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/cases_details_topbaarbox" />
+
+        <android.support.percent.PercentFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_12sdp">
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvDesc"
+                    android:layout_height="@dimen/_80sdp"
+                    android:background="@drawable/maroon_sq_box"
+                    android:drawableTop="@drawable/description_selected"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="@dimen/_22sdp"
+                    android:paddingRight="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_14sdp"
+                    android:text="Description"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="visible"
+                    app:layout_widthPercent="25%" />
+
+                <TextView
+                    android:id="@+id/tvMsg"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_toRightOf="@id/tvDesc"
+                    android:background="@drawable/maroon_sq_box"
+                    android:drawableTop="@drawable/message_selected"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="@dimen/_22sdp"
+                    android:paddingRight="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_14sdp"
+                    android:text="@string/messages"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="gone"
+                    app:layout_widthPercent="25%" />
+
+                <TextView
+                    android:id="@+id/tvLib"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_toRightOf="@id/tvMsg"
+                    android:background="@drawable/maroon_sq_box"
+                    android:drawableTop="@drawable/library_selected"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="@dimen/_22sdp"
+                    android:paddingRight="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_14sdp"
+                    android:text="Library"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="gone"
+                    app:layout_widthPercent="25%" />
+
+
+                <TextView
+                    android:id="@+id/tvCal"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/tvLib"
+                    android:background="@drawable/maroon_sq_box"
+                    android:drawableTop="@drawable/calender_selected"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="@dimen/_22sdp"
+                    android:paddingRight="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_14sdp"
+                    android:text="@string/calendar"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="gone"
+                    app:layout_widthPercent="25%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="@dimen/_16sdp">
+
+                <ImageView
+                    android:id="@+id/imgDesc"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/description2"
+                    android:visibility="invisible"
+                    app:layout_widthPercent="25%" />
+
+                <ImageView
+                    android:id="@+id/imgMsg"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imgDesc"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/message"
+                    app:layout_widthPercent="25%" />
+
+                <ImageView
+                    android:id="@+id/imgLib"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imgMsg"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/library"
+                    app:layout_widthPercent="25%" />
+
+                <ImageView
+                    android:id="@+id/imgCal"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imgLib"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/calender"
+                    app:layout_widthPercent="25%" />
+            </android.support.percent.PercentRelativeLayout>
+
+        </android.support.percent.PercentFrameLayout>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topLayout"
+        android:layout_centerHorizontal="true"></FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llroot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_gray_maroon"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/_6sdp"
+    android:paddingLeft="@dimen/_6sdp"
+    android:paddingRight="@dimen/_10sdp"
+    android:paddingTop="@dimen/_6sdp"
+    >
+
+    <ImageView
+        android:id="@+id/iconType"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:paddingRight="4dp"
+        android:src="@drawable/selector_tick" />
+
+    <com.ingic.lmslawyer.ui.views.AnyTextView
+        android:id="@+id/txtType"
+        style="@style/home_textview_white_style"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        app:typeface="@string/font_roboto"
+        tools:text="Practice Area"
+        />
+
+</LinearLayout>

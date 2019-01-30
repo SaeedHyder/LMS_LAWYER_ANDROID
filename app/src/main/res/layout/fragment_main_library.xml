@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+   >
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvSeperateLibrary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:scrollbars="none" />
+
+        <FrameLayout
+            android:id="@+id/flCaseLib"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rvSeperateLibrary"
+            android:background="@drawable/recent_case_detail_box">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvCaseLibrary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:padding="@dimen/_30sdp" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/alternateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Your Library is empty"
+        android:visibility="gone" />
+
+</RelativeLayout>

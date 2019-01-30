@@ -1,0 +1,548 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.ingic.lmslawyer.fragments.login.LMSLoginFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_50sdp"
+        android:paddingLeft="@dimen/_16sdp"
+        android:paddingRight="@dimen/_16sdp"
+        android:paddingTop="@dimen/_30sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp">
+
+            <FrameLayout
+                android:id="@+id/flProfilePicture"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+               android:layout_centerInParent="true"
+                android:background="@drawable/stroke_maroon_circle">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgviewProfile"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_maroon"
+                    android:src="@drawable/placeholder_image" />
+
+                <ImageView
+                    android:id="@+id/cameraIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_profile_camera" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.ingic.lmslawyer.ui.views.AnyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/case_win"
+                        android:textColor="@color/app_green"
+                        android:textSize="@dimen/x16"
+                        app:typeface="@string/font_roboto" />
+
+                    <com.ingic.lmslawyer.ui.views.AnyTextView
+                        android:id="@+id/txt_win_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/app_green"
+                        android:textSize="@dimen/x16"
+                        app:typeface="@string/font_roboto" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <com.ingic.lmslawyer.ui.views.AnyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/case_lose"
+                        android:textColor="@color/forgot_pass_color"
+                        android:textSize="@dimen/x16"
+                        app:typeface="@string/font_roboto" />
+
+                    <com.ingic.lmslawyer.ui.views.AnyTextView
+                        android:id="@+id/txt_lose_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_marginEnd="@dimen/x23"
+                        android:textColor="@color/forgot_pass_color"
+                        android:textSize="@dimen/x16"
+                        app:typeface="@string/font_roboto" />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:theme="@style/FloatingLabel">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/ietFulName"
+                style="@style/inputEditText"
+                android:hint="@string/full_name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:theme="@style/FloatingLabel">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/ietEmail"
+                style="@style/inputEditText"
+                android:enabled="false"
+                android:hint="@string/email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:theme="@style/FloatingLabel">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/ietMobile"
+                style="@style/inputEditText"
+                android:digits="+0123456789"
+                android:hint="@string/phone_number"
+                android:imeOptions="actionNext"
+                android:inputType="phone" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:theme="@style/FloatingLabel"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/ietLocation"
+                style="@style/inputEditText"
+                android:hint="@string/location"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <com.ingic.lmslawyer.ui.views.AutoCompleteLocation
+            android:id="@+id/txt_autoCompleteLocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x45"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textColor="@color/inputEditTextColor"
+            android:textSize="@dimen/x14"
+            android:visibility="visible"
+            app:typeface="@string/font_roboto" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@color/grey" />
+
+        <!-- <android.support.design.widget.TextInputLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="@dimen/_12sdp"
+             android:theme="@style/FloatingLabel">
+
+             <android.support.design.widget.TextInputEditText
+                 android:id="@+id/ietAcademics"
+                 style="@style/inputEditText"
+                 android:hint="@string/academics"
+                 android:imeOptions="actionNext"
+                 android:inputType="text" />
+
+         </android.support.design.widget.TextInputLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/academicsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <com.ingic.lmslawyer.ui.views.AnyTextView
+                android:id="@+id/txtAcademics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/academics"
+                android:theme="@style/FloatingLabel"
+                android:visibility="gone"
+                app:typeface="@string/font_roboto" />
+
+            <com.ingic.lmslawyer.ui.views.TagEditText
+                android:id="@+id/edtAcademics"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40"
+                android:layout_below="@id/txtAcademics"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="center_vertical|start"
+                android:hint="Academics"
+                android:textColor="@color/inputEditTextColor"
+                android:textColorHint="@color/inputEditTextHintColor">
+
+            </com.ingic.lmslawyer.ui.views.TagEditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_below="@id/edtAcademics"
+                android:layout_marginTop="@dimen/x3"
+                android:background="@drawable/line">
+
+            </View>
+
+            <!-- <ImageView
+
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/ic_downarow"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginRight="@dimen/x10"
+                 />-->
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/_12sdp"-->
+            <!--android:layout_weight="0.4"-->
+            <!--android:theme="@style/FloatingLabel"-->
+            <!---->
+
+            <!--&gt;-->
+
+            <!--<android.support.design.widget.TextInputEditText-->
+            <!--android:id="@+id/ietFees"-->
+            <!--style="@style/inputEditText"-->
+            <!--android:digits="0123456789"-->
+            <!--android:hint="Fees"-->
+            <!--android:imeOptions="actionNext"-->
+            <!--android:inputType="phone"-->
+            <!--android:visibility="gone"/>-->
+            <!---->
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+            <!---->
+            <RelativeLayout
+                android:id="@+id/rateLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x15"
+                android:layout_weight="0.49"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <com.ingic.lmslawyer.ui.views.AnyTextView
+                    android:id="@+id/txtFees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:hint="Fees"
+                    android:theme="@style/FloatingLabel"
+                    android:visibility="visible"
+                    app:typeface="@string/font_roboto" />
+
+                <Spinner
+                    android:id="@+id/spinnerRates"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x40"
+                    android:layout_below="@id/txtFees" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:theme="@style/FloatingLabel"
+                    android:visibility="gone">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/ietFees"
+                        style="@style/inputEditText"
+                        android:cursorVisible="false"
+                        android:digits="0123456789"
+                        android:focusable="false"
+                        android:gravity="center_vertical"
+                        android:hint="Fees"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/line" />
+
+                <!-- <ImageView
+
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/ic_downarow"
+                     android:layout_alignParentRight="true"
+                     android:layout_centerVertical="true"
+                     android:layout_marginRight="@dimen/x10"
+                     />-->
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.02" />
+
+            <RelativeLayout
+                android:id="@+id/affiliationLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x15"
+                android:layout_weight="0.49"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <com.ingic.lmslawyer.ui.views.AnyTextView
+                    android:id="@+id/txtAffiliation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:hint="Affiliation"
+                    android:theme="@style/FloatingLabel"
+                    app:typeface="@string/font_roboto" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerAffiliation"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x40"
+                    android:layout_below="@id/txtAffiliation" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/line" />
+
+                <!-- <ImageView
+
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/ic_downarow"
+                     android:layout_alignParentRight="true"
+                     android:layout_centerVertical="true"
+                     android:layout_marginRight="@dimen/x10"
+                     />-->
+            </RelativeLayout>
+
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:layout_weight="0.55"
+                android:theme="@style/FloatingLabel">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/ietAffiliation"
+                    style="@style/inputEditText"
+                    android:drawablePadding="4dp"
+                    android:drawableRight="@drawable/ic_downarow"
+                    android:hint="@string/affiliation"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>-->
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/x5"
+            android:theme="@style/FloatingLabel">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/ietAward"
+                style="@style/inputEditText"
+                android:hint="Award"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/expLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x15"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <com.ingic.lmslawyer.ui.views.AnyTextView
+                android:id="@+id/txtExp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+
+                android:hint="Experience"
+                android:theme="@style/FloatingLabel"
+                app:typeface="@string/font_roboto" />
+
+
+            <Spinner
+                android:id="@+id/spinnerExp"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40"
+                android:layout_below="@id/txtExp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_below="@id/spinnerExp"
+                android:layout_marginTop="@dimen/x3"
+                android:background="@drawable/line">
+
+            </View>
+
+            <!-- <ImageView
+
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/ic_downarow"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginRight="@dimen/x10"
+                 />-->
+        </RelativeLayout>
+
+
+        <!-- <android.support.design.widget.TextInputLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="@dimen/_12sdp"
+             android:theme="@style/FloatingLabel">
+
+             <android.support.design.widget.TextInputEditText
+                 android:id="@+id/ietExperience"
+                 style="@style/inputEditText"
+                 android:drawablePadding="4dp"
+                 android:drawableRight="@drawable/ic_downarow"
+                 android:hint="Experience"
+                 android:imeOptions="actionNext"
+                 android:inputType="text" />
+
+         </android.support.design.widget.TextInputLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bio"
+                android:textColor="@color/inputEditTextHintColor"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/etBioData"
+                style="@style/inputEditTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="left"
+                android:hint="Bio Data"
+                android:inputType="text"
+                android:theme="@style/FloatingLabel"
+                tools:text="@string/lorem_ipsum" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/maroon_button_style"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/next" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/x15">
+
+        <!--
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/x60"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/women" />-->
+
+        <com.ingic.lmslawyer.util.RoundCornersImageView
+            android:id="@+id/profileImage"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/women" />
+
+        <LinearLayout
+            android:id="@+id/textLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/profileImage"
+            android:layout_alignTop="@+id/profileImage"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_toEndOf="@id/profileImage"
+            android:layout_weight="0.9"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <com.ingic.lmslawyer.ui.views.AnyTextView
+                android:id="@+id/txtName"
+                style="@style/textview_large_dark_gray_style"
+                android:text="John Glen"
+                app:typeface="@string/font_roboto" />
+
+            <LinearLayout
+                android:id="@+id/filedArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:orientation="horizontal">
+
+                <com.ingic.lmslawyer.ui.views.AnyTextView
+
+                    style="@style/textview_gray_style"
+                    android:text="@string/fields"
+                    app:typeface="@string/font_roboto" />
+
+                <com.ingic.lmslawyer.ui.views.AnyTextView
+                    android:id="@+id/txtField"
+                    style="@style/textview_small_dark_gray_style"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:text="Mergers % Acquisition"
+                    app:typeface="@string/font_roboto_bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/professionArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x5"
+                android:orientation="horizontal">
+
+                <com.ingic.lmslawyer.ui.views.AnyTextView
+
+                    style="@style/textview_gray_style"
+                    android:text="@string/profession"
+                    app:typeface="@string/font_roboto" />
+
+                <com.ingic.lmslawyer.ui.views.AnyTextView
+                    android:id="@+id/txtProfession"
+                    style="@style/textview_small_dark_gray_style"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:text="Lawyer"
+                    app:typeface="@string/font_roboto_bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x5"
+                android:orientation="horizontal">
+
+                <com.ingic.lmslawyer.ui.views.AnyTextView
+
+                    style="@style/textview_gray_style"
+                    android:text="@string/experience"
+                    app:typeface="@string/font_roboto" />
+
+                <com.ingic.lmslawyer.ui.views.AnyTextView
+                    android:id="@+id/txtExp"
+                    style="@style/textview_small_dark_gray_style"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:text="12 years"
+                    app:typeface="@string/font_roboto_bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--
+
+                <Button
+                    android:id="@+id/btnViewProfile"
+                    android:layout_weight="0.15"
+                    style="@style/maroon_small_rounded_button_style"
+                    android:text="@string/view_profile"
+                    android:layout_gravity="top"
+                    />
+        -->
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@id/dateLayout"
+        android:layout_marginLeft="@dimen/x15"
+        android:layout_marginRight="@dimen/x15"
+        android:background="@color/light_grey"
+
+        >
+
+    </View>
+
+
+</LinearLayout>

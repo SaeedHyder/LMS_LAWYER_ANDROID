@@ -1,0 +1,167 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+
+
+android {
+    compileSdkVersion 27
+    //buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "com.ingic.lmslawyer"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 13
+        versionName "0.50.64"
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dexOptions {
+//        javaMaxHeapSize "4g"
+    }
+
+}
+ext.supportApiVersion = '27.0.0'
+ext.googleApiVersion = '11.6.2'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$supportApiVersion"
+    implementation "com.android.support:animated-vector-drawable:$supportApiVersion"
+    implementation "com.android.support:support-v4:$supportApiVersion"
+    implementation "com.android.support:design:$supportApiVersion"
+    //RecyclerView
+    implementation "com.android.support:recyclerview-v7:$supportApiVersion"
+    implementation 'com.google.guava:guava:20.0'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    implementation('com.andreabaccega:android-form-edittext:1.2.1@aar') {
+        exclude module: 'design'
+    }
+    //implementation project(':commons-lang3-3.1')
+    implementation 'se.emilsjolander:stickylistheaders:2.7.0'
+    //For ButterKnife
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //For Facebook
+//    implementation 'com.facebook.android:facebook-android-sdk:4.5.0'
+//    implementation 'com.github.bumptech.glide:glide:3.6.1'
+    //For Circular Image View
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+//    implementation 'com.squareup:otto:1.3.8'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+//    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.squareup:otto:1.3.8'
+    //For retorfit
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+//    implementation 'com.squareup.okhttp3:logging-interceptor:3.0.1'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation project(':nineoldandroids-library-2.4.0')
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.xiaofeng.android:flowlayoutmanager:1.2.3.2'
+//    implementation project(':android-slidr')
+    implementation project(':autocompletes')
+
+
+    //Enable logging
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    //range bar
+    implementation 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.3.0'
+
+    //Image chooser
+    implementation 'com.kbeanie:image-chooser-library:1.5.8@aar'
+
+    //CUstom tabs
+    implementation group: 'com.astuetz', name: 'pagerslidingtabstrip', version: '1.0.1'
+
+    //Sdp
+    implementation 'com.intuit.sdp:sdp-android:1.0.4'
+
+    /*Pin edit text*/
+
+    implementation 'com.alimuzaffar.lib:pinentryedittext:1.3.1'
+
+    /*For rounded layout*/
+    implementation 'com.jcminarro:RoundKornerLayouts:0.3.1'
+
+    /*constraint layout*/
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    /*percent relative layout*/
+    implementation "com.android.support:percent:$supportApiVersion"
+
+    implementation 'com.github.prolificinteractive:material-calendarview:1.5.0'
+
+    implementation 'id.zelory:compressor:2.1.0'
+
+    implementation 'com.flyco.dialog:FlycoDialog_Lib:1.3.2@aar'
+    implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.0.4'
+
+    implementation 'org.apache.commons:commons-lang3:3.6'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.4@aar') {
+        transitive = true;
+    }
+
+//    implementation 'com.github.stfalcon:frescoimageviewer:0.5.0'
+//    implementation('com.facebook.fresco:fresco:1.9.0') {
+//        exclude group: 'com.parse.bolts', module: 'bolts-tasks'
+//    }
+
+    implementation 'id.zelory:compressor:2.1.0'
+    //Whatsapp like image view
+    implementation 'com.github.dmallcott:DismissibleImageView:1.0.1'
+
+  /*  implementation "com.google.android.gms:play-services-base:$googleApiVersion"
+    implementation "com.google.android.gms:play-services-maps:$googleApiVersion"
+    implementation "com.google.android.gms:play-services-auth:$googleApiVersion"
+    implementation "com.google.android.gms:play-services-location:$googleApiVersion"
+    implementation "com.google.android.gms:play-services-places:$googleApiVersion"*/
+    implementation "com.google.android.gms:play-services:$googleApiVersion"
+
+//    implementation "com.google.android.gms:play-services:$googleApiVersion"
+//    implementation 'com.google.android.gms:play-services:11.0.4'
+
+    implementation "com.google.firebase:firebase-messaging:$googleApiVersion"
+    /*Runtime permissions*/
+    implementation('com.github.hotchemi:permissionsdispatcher:3.0.1') {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:3.0.1"
+
+    /*flyco dialog*/
+//    compile 'com.flyco.dialog:FlycoDialog_Lib:1.3.2@aar'
+
+    implementation 'com.flyco.dialog:FlycoDialog_Lib:1.3.2@aar'
+    implementation 'com.karumi:dexter:5.0.0'
+}
+
+
+apply plugin: 'com.google.gms.google-services'
+
+

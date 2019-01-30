@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x8"
+        android:layout_marginBottom="@dimen/x10"
+        android:background="@color/view_color"
+        />
+
+    <com.ingic.lmslawyer.ui.views.AnyTextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Faith"
+        android:layout_marginEnd="@dimen/x8"
+        android:layout_marginStart="@dimen/x15"
+        android:layout_marginBottom="@dimen/x10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x17"
+        app:typeface="@string/font_roboto" />
+
+    <com.ingic.lmslawyer.ui.views.CustomRecyclerView
+        android:id="@+id/rv_category_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x10"/>
+
+
+
+
+</LinearLayout>

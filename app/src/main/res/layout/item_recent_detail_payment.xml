@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/_12sdp"
+    android:layout_marginBottom="@dimen/_12sdp"
+    >
+
+    <TextView
+        android:id="@+id/tvCasePaymentList"
+        style="@style/textview_light_grey_10_regular_style"
+        android:layout_below="@id/rvPayment"
+        android:layout_weight="0.3"
+        android:text="Case Consultation" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/textview_light_grey_10_regular_style"
+        android:layout_below="@id/rvPayment"
+        android:layout_weight="0.3"
+        android:text="23 Feb 2018" />
+
+    <TextView
+        android:id="@+id/tvPayment"
+        style="@style/textview_grey_medium_bold_style"
+        android:layout_below="@id/rvPayment"
+        android:layout_weight="0.3"
+        android:gravity="end"
+        android:text="$300"
+        android:textSize="@dimen/_10sdp" />
+</LinearLayout>

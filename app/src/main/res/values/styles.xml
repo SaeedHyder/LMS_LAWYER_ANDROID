@@ -1,0 +1,505 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorAccent">@color/app_maroon</item>
+    </style>
+
+
+    <style name="form_edttext_fields_style" parent="@android:style/Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/x40</item>
+        <item name="android:textColorHint">@color/field_hint_gray</item>
+        <item name="android:paddingLeft">@dimen/x15</item>
+        <item name="android:drawablePadding">@dimen/x15</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/x12</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:maxLength">50</item>
+
+    </style>
+
+
+    <style name="home_textview_white_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/x11</item>
+
+
+    </style>
+
+    <style name="home_textview_maroon_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_maroon</item>
+        <item name="android:textSize">@dimen/x11</item>
+        <item name="android:gravity">center_vertical</item>
+
+
+    </style>
+
+
+    <style name="textview_gray_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/field_hint_gray</item>
+        <item name="android:textSize">@dimen/x9</item>
+
+
+    </style>
+
+
+    <style name="textview_large_gray_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/field_hint_gray</item>
+        <item name="android:textSize">@dimen/x14</item>
+
+
+    </style>
+
+    <!--<style name="textview_ex_large_gray_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/field_hint_gray</item>
+        <item name="android:textSize">@dimen/x15</item>
+
+
+    </style>-->
+
+    <style name="editText_large_black_style" parent="@android:style/Widget.EditText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/x16</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="textview_extra_large_dark_gray_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textSize">@dimen/x19</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textview_large_dark_gray_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textSize">@dimen/x16</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="textview_medium_dark_gray_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+
+    </style>
+
+    <style name="textview_small_dark_gray_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textSize">@dimen/x9</item>
+
+    </style>
+
+    <style name="textview_maroon_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_maroon</item>
+        <item name="android:textSize">@dimen/x9</item>
+        <item name="android:gravity">center_vertical</item>
+
+
+    </style>
+
+    <style name="textview_maroon_medium_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_maroon</item>
+        <item name="android:textSize">@dimen/x11</item>
+        <item name="android:gravity">center_vertical</item>
+
+
+    </style>
+
+    <style name="textview_maroon_large_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_maroon</item>
+        <item name="android:textSize">@dimen/x16</item>
+        <item name="android:gravity">center_vertical</item>
+
+
+    </style>
+
+    <style name="maroon_rounded_button_style" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/x40</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/x14</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/maroon_rounded_rectangle</item>
+        <item name="font">@string/font_roboto_bold</item>
+
+    </style>
+
+    <style name="yellow_rounded_button_style" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/x40</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/x14</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/yellow_rounded_rectangle</item>
+        <item name="font">@string/font_roboto_bold</item>
+
+    </style>
+
+    <style name="maroon_small_rounded_button_style" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/x10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_signin</item>
+        <item name="font">@string/font_roboto</item>
+
+    </style>
+
+
+    <style name="editText_gray_style" parent="@android:style/Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textColorHint">@color/field_hint_gray</item>
+        <item name="android:textSize">@dimen/x9</item>
+        <item name="android:background">@null</item>
+        <item name="android:maxLength">50</item>
+
+    </style>
+
+    <style name="editText_gray_small_style" parent="@android:style/Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textColorHint">@color/field_hint_gray</item>
+        <item name="android:textSize">@dimen/x7</item>
+        <item name="android:background">@null</item>
+        <item name="android:maxLength">50</item>
+
+    </style>
+
+
+    <style name="editText_large_gray_style" parent="@android:style/Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textColorHint">@color/field_hint_gray</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:background">@null</item>
+        <item name="android:maxLength">50</item>
+
+    </style>
+
+    <!--New Style-->
+    <!--  <style name="FloatingLabel" parent="@android:style/TextAppearance">
+          <item name="android:textColor">@color/inputEditTextHintColor</item>
+          <item name="android:textSize">12sp</item>
+          <item name="android:cursorVisible">true</item>
+      </style>
+  -->
+    <style name="inputEditText" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_38sdp</item>
+        <item name="android:textColor">@color/inputEditTextColor</item>
+        <item name="android:background">@drawable/line</item>
+        <item name="android:drawablePadding">@dimen/_10sdp</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+
+    </style>
+
+    <style name="inputEditTextBox" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_38sdp</item>
+        <item name="android:textColor">@color/inputEditTextColor</item>
+        <item name="android:background">@drawable/stroke_grey_rounded_less_radius</item>
+        <item name="android:padding">@dimen/_4sdp</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+
+    </style>
+
+    <style name="inputGrayEditText" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_38sdp</item>
+        <item name="android:textColor">@color/inputEditTextHintColor</item>
+        <item name="android:background">@drawable/line</item>
+        <item name="android:drawablePadding">@dimen/_8sdp</item>
+        <item name="android:paddingLeft">@dimen/_10sdp</item>
+        <item name="android:padding">@dimen/_6sdp</item>
+    </style>
+
+    <style name="inputDarkGrayEditText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textColorHint">@color/text_dark_gray</item>
+        <item name="android:background">@drawable/line</item>
+        <item name="android:drawablePadding">@dimen/_8sdp</item>
+        <item name="android:paddingLeft">@dimen/_10sdp</item>
+        <item name="android:padding">@dimen/_6sdp</item>
+    </style>
+
+    <style name="inputDarkGrayEditTextWithoutPadding" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_38sdp</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textColorHint">@color/field_hint_gray</item>
+        <item name="android:background">@drawable/line</item>
+        <item name="android:drawablePadding">@dimen/_8sdp</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+
+    </style>
+
+
+    <!--Button style-->
+    <style name="maroon_button_style" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_50sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/btn_signin</item>
+        <item name="font">@string/font_roboto</item>
+    </style>
+    <!--Button style with less width-->
+    <style name="maroon_button_style_less_width" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_50sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_20sdp</item>
+        <item name="android:layout_marginRight">@dimen/_20sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/btn_signin</item>
+        <item name="font">@string/font_roboto</item>
+    </style>
+    <!--Button style with stroke-->
+    <style name="maroon_stroke_button_style" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:textColor">@color/app_maroon</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/btn_maroon_stroke</item>
+        <item name="font">@string/font_roboto</item>
+    </style>
+
+    <!--Button style with profile stroke-->
+    <style name="maroon_button_profile_style" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="android:textColor">@color/app_maroon</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/uploadbtn</item>
+        <item name="font">@string/font_roboto</item>
+    </style>
+
+    <!--Button style for dialogs-->
+    <style name="maroon_button_style_dialogs" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">@dimen/_200sdp</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/btn_signin</item>
+        <item name="font">@string/font_roboto</item>
+    </style>
+
+    <style name="textview_grey_medium_bold_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/inputEditTextBoldGrayColor</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="textview_light_grey_medium_bold_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/inputEditTextColor</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="textview_light_grey_medium_regular_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/medium_grey</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="textview_light_grey_10_regular_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/medium_grey</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="textview_grey_medium_regular_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/inputEditTextBoldGrayColor</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!--//My case desc textview style-->
+    <style name="textview_grey_my_case_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/inputEditTextBoldGrayColor</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="textview_smallest_gray_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/x11</item>
+    </style>
+
+    <style name="textview_12size_gray_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <style name="textview_14size_gray_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="textview_maroon_medium_regular_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_maroon</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="textview_maroon_small_regular_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_maroon</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="textview_maroon_small_light_style" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_maroon</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/light</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="editText_medium_gray_style" parent="@android:style/Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textColorHint">@color/field_hint_gray</item>
+        <item name="android:textSize">@dimen/x11</item>
+        <item name="android:background">@null</item>
+        <item name="android:maxLength">50</item>
+
+    </style>
+
+    <!-- <style name="editText_dark_gray_style" parent="@android:style/Widget.EditText">
+         <item name="android:layout_width">match_parent</item>
+         <item name="android:layout_height">wrap_content</item>
+         <item name="android:textColorHint">@color/field_hint_gray</item>
+         <item name="android:textColor">@color/text_dark_gray</item>
+         <item name="android:textSize">@dimen/x9</item>
+         <item name="android:background">@null</item>
+         <item name="android:maxLength">50</item>
+
+     </style>-->
+
+
+    <style name="DialogCustomTheme" parent="android:Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="spinner_style" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@android:style/TextAppearance.Holo.Widget.TextView.SpinnerItem</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:background">@drawable/spinner_dropdown</item>
+
+    </style>
+  <!--  <style name="Widget.Holo.TextView.SpinnerItem" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">TextAppearance.Holo.Widget.TextView.SpinnerItem</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>-->
+
+</resources>

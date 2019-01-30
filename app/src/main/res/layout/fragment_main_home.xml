@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ingic.lmslawyer.fragments.home.MainHomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg3" />
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:background="@drawable/home_headerimage"
+        android:paddingTop="@dimen/_4sdp">
+
+        <ImageView
+            android:id="@+id/imgHomeUserProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@drawable/ic_home_profile" />
+
+        <ImageView
+            android:id="@+id/imgHomeNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_home_notifications" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="12dp"
+            android:paddingEnd="-12dp"
+            android:src="@drawable/home_logo" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:layout_marginRight="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_130sdp"
+        android:background="@drawable/home_searchbaar"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <com.ingic.lmslawyer.ui.views.AnyEditTextView
+            style="@style/editText_medium_gray_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
+            android:hint="@string/search"
+            android:paddingLeft="@dimen/_12sdp"
+            android:paddingRight="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textSize="@dimen/_12sdp"
+            android:theme="@style/FloatingLabel"
+            app:typeface="@string/font_roboto" />
+
+        <ImageView
+            android:id="@+id/imgviewSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.15"
+            android:padding="8dp"
+            android:src="@drawable/ic_home_search" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llSearchBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/rlMiddle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginRight="@dimen/_14sdp">
+
+                <TextView
+                    android:id="@+id/myCaseTv"
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@drawable/white_rounded_rectangle"
+                    android:drawableTop="@drawable/ic_home_case"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:text="@string/my_cases"
+                    app:layout_widthPercent="30%" />
+
+                <TextView
+                    android:id="@+id/myLibraryTv"
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@drawable/white_rounded_rectangle"
+                    android:drawableTop="@drawable/ic_home_library"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:text="@string/my_library"
+                    app:layout_widthPercent="30%" />
+
+                <TextView
+                    android:id="@+id/settingsTv"
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@drawable/white_rounded_rectangle"
+                    android:drawableTop="@drawable/ic_home_settings"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:text="@string/settings"
+                    app:layout_widthPercent="30%" />
+
+                <TextView
+                    android:id="@+id/myCalenderTv"
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/myCaseTv"
+                    android:background="@drawable/white_rounded_rectangle"
+                    android:drawableTop="@drawable/ic_home_calender"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:text="@string/my_calendar"
+                    app:layout_widthPercent="30%" />
+
+                <TextView
+                    android:id="@+id/messagesTv"
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/myLibraryTv"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/white_rounded_rectangle"
+                    android:drawableTop="@drawable/ic_home_message"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:text="@string/my_messages"
+                    app:layout_widthPercent="30%" />
+
+                <TextView
+                    android:id="@+id/newfeedTv"
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/settingsTv"
+                    android:background="@drawable/white_rounded_rectangle"
+                    android:drawableTop="@drawable/ic_home_newsfeed"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:text="@string/newsfeeds"
+                    app:layout_widthPercent="30%" />
+            </android.support.percent.PercentRelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvLatestUpdates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlMiddle"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@color/transparent_maroon"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                android:text="Latest Updates"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvHomeNewsfeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLatestUpdates"
+                android:background="@color/home_newsfeed_maroon"
+                android:paddingBottom="@dimen/_16sdp"
+                android:paddingTop="@dimen/_12sdp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

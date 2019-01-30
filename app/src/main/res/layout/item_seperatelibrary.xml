@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_10sdp">
+
+    <com.ingic.lmslawyer.util.RoundCornersImageView
+        android:id="@+id/imgview"
+        android:layout_width="@dimen/x110"
+        android:layout_height="@dimen/x110"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_image"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tvDocType"
+        style="@style/textview_12size_gray_style"
+        android:layout_below="@id/imgview"
+        android:layout_marginLeft="@dimen/_14sdp"
+        tools:text="All Photos"
+        android:fontFamily="@font/regular"
+        />
+
+    <TextView
+        android:id="@+id/tvQuantity"
+        style="@style/textview_12size_gray_style"
+        android:layout_below="@+id/imgview"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_toRightOf="@+id/tvDocType"
+        android:textColor="@color/inputEditTextColor"
+        tools:text="15"
+        android:fontFamily="@font/regular"
+        />
+
+</RelativeLayout>

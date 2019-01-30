@@ -1,0 +1,87 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="250dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingEnd="-12dp"
+                android:src="@drawable/signup_logo" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/x40">
+
+            <TextView
+                style="@style/textview_grey_medium_bold_style"
+                android:gravity="center"
+                android:text="@string/forgot_password" />
+
+
+            <TextView
+                style="@style/textview_grey_medium_regular_style"
+                android:layout_marginTop="@dimen/x20"
+                android:gravity="center"
+                android:text="@string/enter_4_digit_code_here" />
+
+
+            <com.alimuzaffar.lib.pin.PinEntryEditText
+                android:id="@+id/et_enterPin"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:cursorVisible="false"
+                android:digits="0123456789"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingTop="16dp"
+                android:textColor="@color/grey"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:pinAnimationType="fromBottom"
+                app:pinBackgroundDrawable="@drawable/drawable_pin_enter"
+                app:pinCharacterSpacing="12dp"
+                app:pinTextBottomPadding="8dp" />
+
+
+            <TextView
+                android:id="@+id/tvResentCode"
+                style="@style/textview_grey_medium_regular_style"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="?attr/selectableItemBackground"
+                android:text="@string/don_t_get_code_yet" />
+
+
+            <Button
+                android:id="@+id/btnSubmit"
+                style="@style/maroon_button_style"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPerson"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/textview_14size_gray_style"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_toEndOf="@id/imgPerson"
+        android:layout_toStartOf="@id/imgDltAdd"
+        android:text="David Wiliam"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+
+    <ImageView
+        android:id="@+id/imgDltAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        tools:src="@drawable/ic_delete"
+        android:padding="4dp"/>
+
+</RelativeLayout>

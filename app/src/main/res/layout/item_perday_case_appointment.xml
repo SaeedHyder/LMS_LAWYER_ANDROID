@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvFromTime"
+        style="@style/textview_maroon_medium_regular_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/bold"
+        android:singleLine="true"
+        tools:text="12:30 pm"
+        android:textAlignment="textEnd" />
+
+    <TextView
+        android:id="@+id/tvToTime"
+        style="@style/textview_maroon_medium_regular_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/tvFromTime"
+        android:layout_below="@id/tvFromTime"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:singleLine="true"
+        tools:text="1:00 pm"
+        android:textAlignment="textEnd" />
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="1dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/tvFromTime"
+        android:background="@color/app_maroon" />
+
+    <TextView
+        android:id="@+id/tvCaseName"
+        style="@style/textview_smallest_gray_style"
+        android:layout_toRightOf="@id/seperator"
+        android:ellipsize="end"
+        android:singleLine="true"
+        tools:text="White Case.."
+        android:textSize="@dimen/_18sdp" />
+
+    <TextView
+        android:id="@+id/tvLawyerName"
+        style="@style/textview_smallest_gray_style"
+        android:layout_below="@+id/tvCaseName"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_toRightOf="@id/seperator"
+        tools:text="@string/lawyer_philipe_gibson"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/txtCaseDetails"
+        style="@style/textview_smallest_gray_style"
+        android:layout_below="@+id/tvLawyerName"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_toRightOf="@id/seperator"
+        android:ellipsize="end"
+        android:maxLines="2"
+        tools:text="@string/case_snatching_case"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tvEvent"
+        style="@style/textview_smallest_gray_style"
+        android:layout_alignStart="@id/tvCaseName"
+        android:layout_below="@+id/txtCaseDetails"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_toRightOf="@id/seperator"
+        android:layout_toStartOf="@id/tvViewDetails"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="@string/event_meeting_scheduled"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tvViewDetails"
+        style="@style/textview_smallest_gray_style"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtCaseDetails"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:background="@drawable/stroke_grey_rounded"
+        android:paddingBottom="@dimen/_6sdp"
+        android:paddingLeft="@dimen/_13sdp"
+        android:paddingRight="@dimen/_13sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:text="@string/view_details" />
+
+</RelativeLayout>

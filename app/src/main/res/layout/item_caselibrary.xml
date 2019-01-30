@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_8sdp">
+
+    <com.ingic.lmslawyer.util.RoundCornersImageView
+        android:id="@+id/imgview"
+        android:layout_width="@dimen/_82sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/p1" />
+
+    <TextView
+        android:id="@+id/tvCaseName"
+        style="@style/textview_14size_gray_style"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_toRightOf="@id/imgview"
+        tools:text="Photos" />
+
+    <TextView
+        android:id="@+id/tvPhotosNumbers"
+        style="@style/textview_12size_gray_style"
+        android:layout_alignStart="@+id/tvCaseName"
+        android:layout_below="@+id/tvCaseName"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:drawablePadding="@dimen/_4sdp"
+        android:drawableStart="@drawable/ic_photos"
+        android:textColor="@color/inputEditTextColor"
+        android:textSize="@dimen/_14sdp"
+        tools:text="15" />
+
+    <TextView
+        android:id="@+id/tvDocNumbers"
+        style="@style/textview_12size_gray_style"
+        android:layout_below="@+id/tvCaseName"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_toRightOf="@+id/tvPhotosNumbers"
+        android:drawablePadding="@dimen/_4sdp"
+        android:drawableStart="@drawable/ic_docs"
+        android:textColor="@color/inputEditTextColor"
+        android:textSize="@dimen/_14sdp"
+        tools:text="156" />
+
+    <TextView
+        android:id="@+id/tvVideoNumbers"
+        style="@style/textview_12size_gray_style"
+        android:layout_below="@+id/tvCaseName"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_toRightOf="@+id/tvDocNumbers"
+        android:drawablePadding="@dimen/_4sdp"
+        android:drawableStart="@drawable/ic_videos"
+        android:textColor="@color/inputEditTextColor"
+        android:textSize="@dimen/_14sdp"
+        tools:text="256" />
+
+</RelativeLayout>

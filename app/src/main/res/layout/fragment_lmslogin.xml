@@ -1,0 +1,87 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.ingic.lmslawyer.fragments.login.LMSLoginFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_50sdp"
+        android:paddingLeft="@dimen/_16sdp"
+        android:paddingRight="@dimen/_16sdp"
+        android:paddingTop="@dimen/_30sdp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:theme="@style/FloatingLabel"
+            app:passwordToggleTint="@color/white">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/ietEmail"
+                style="@style/inputEditText"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                tools:text="slklskdl"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:theme="@style/FloatingLabel"
+            app:passwordToggleEnabled="false"
+            app:passwordToggleTint="@color/white">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/ietPassword"
+                style="@style/inputEditText"
+                android:drawableLeft="@drawable/ic_pass"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSingIn"
+            style="@style/maroon_button_style"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/sign_in" />
+
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            style="@style/inputEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:text="@string/forgot_password_underline" />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            style="@style/inputEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/don_t_have_an_account_sign_up" />
+
+
+    </LinearLayout>
+
+</ScrollView>

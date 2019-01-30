@@ -1,0 +1,198 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:fillViewport="true"
+    tools:context="com.ingic.lmslawyer.fragments.Case.CaseDescriptionFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_24sdp"
+            android:paddingRight="@dimen/_24sdp"
+            android:paddingTop="@dimen/_24sdp"
+            >
+
+            <LinearLayout
+                android:id="@+id/llheadings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/seperator"
+                android:layout_alignTop="@+id/rlheadingsText"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textview_grey_my_case_style"
+                    android:fontFamily="@font/bold"
+                    android:text="User Name:" />
+
+
+                <TextView
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="right"
+                    android:text="Subject:" />
+
+                <TextView
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="right"
+                    android:text="Case Description:" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlheadingsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/llheadings"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLawyerName"
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toStartOf="@id/tvDateTime"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="Philpe Gibson" />
+
+                <TextView
+                    android:id="@+id/tvDateTime"
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/light"
+                    tools:text="12:30 pm | 12 Sep 2017"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TextView
+                    android:id="@+id/tvSubject"
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_below="@id/tvLawyerName"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:gravity="right"
+                    tools:text="Filing Case" />
+
+                <TextView
+                    android:id="@+id/tvCaseDesc"
+                    style="@style/textview_grey_my_case_style"
+                    android:layout_below="@id/tvSubject"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    tools:text="@string/lorem_ipsum_small"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/seperator"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_below="@id/rlheadingsText"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:background="@color/grey" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlCaseBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlTop"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp">
+
+            <Button
+                android:id="@+id/btnAccept"
+                style="@style/maroon_button_style"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:text="@string/accept"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnReject"
+                style="@style/maroon_stroke_button_style"
+                android:layout_below="@id/btnAccept"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/reject"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPayment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rlTop"
+            android:background="@drawable/recent_case_detail_box"
+            android:orientation="vertical"
+            android:padding="@dimen/_24sdp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtPayment"
+                style="@style/textview_grey_my_case_style"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/bold"
+                android:text="Payments:"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/seperator1"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_below="@id/txtPayment"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:background="@color/grey" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seperator1" />
+
+            <TextView
+
+                style="@style/textview_light_grey_medium_bold_style"
+                android:layout_below="@id/rvPayment"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/bold"
+                android:text="Total"
+                android:textColor="@color/medium_grey" />
+
+            <TextView
+                android:id="@+id/tvTotalAmount"
+                style="@style/textview_light_grey_medium_bold_style"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/rvPayment"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/bold"
+                android:text="$0.0"
+                android:textColor="@color/medium_grey"
+                />
+
+            <Button
+                android:id="@+id/btnChargePayment"
+                style="@style/maroon_button_style"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_below="@id/tvTotalAmount"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:text="@string/charge_payment" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/x15"
+    android:paddingRight="@dimen/x15">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_18sdp"
+            android:paddingTop="@dimen/_18sdp">
+
+
+            <TextView
+                style="@style/textview_grey_medium_regular_style"
+                android:layout_centerVertical="true"
+                android:text="@string/noti" />
+
+            <ToggleButton
+                android:id="@+id/togglePushNotification"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@drawable/selector_toggle"
+                android:checked="true"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey">
+
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/changePass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_18sdp"
+            android:paddingTop="@dimen/_18sdp">
+
+
+            <TextView
+                style="@style/textview_grey_medium_regular_style"
+                android:layout_centerVertical="true"
+                android:text="@string/change_pass" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:padding="4dp"
+                android:src="@drawable/ic_rightarrow" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_18sdp"
+            android:paddingTop="@dimen/_18sdp">
+
+            <TextView
+                android:id="@+id/tvLanguage"
+                style="@style/textview_grey_medium_regular_style"
+                android:layout_centerVertical="true"
+                android:text="@string/language" />
+
+
+            <TextView
+                android:id="@+id/tvLanguageText"
+                style="@style/textview_maroon_small_regular_style"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/x10"
+                android:text="English" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/x10"
+            android:background="@color/light_grey" />
+
+        <RelativeLayout
+            android:id="@+id/rlLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_18sdp"
+            android:paddingTop="@dimen/_18sdp">
+
+
+            <TextView
+                style="@style/textview_grey_medium_regular_style"
+                android:layout_centerVertical="true"
+                android:text="@string/logout" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:padding="4dp"
+                android:src="@drawable/ic_rightarrow" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
